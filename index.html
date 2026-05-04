@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#070b14" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Monolith OS &middot; Built for the ones who mean it</title>
+  <meta name="description" content="A lean, server-focused Linux distribution built on Arch Linux. Custom kernel, unified mnctl CLI, branded TUI and web dashboards, integrated monitoring, hardened security, k3s, snapshot-safe upgrades, and zero-config app templates." />
+  <meta name="keywords" content="Monolith OS, Linux distribution, server distro, Arch Linux, mnctl, Rust, k3s, Btrfs, mnpkg, mnweb, mntui, monolith installer" />
+  <meta name="author" content="shirou-eh" />
+
+  <link rel="canonical" href="https://shirou-eh.github.io/Monolith-website/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Monolith OS - Built for the ones who mean it" />
+  <meta property="og:description" content="A lean, server-focused Linux distribution. Custom kernel, unified CLI, integrated monitoring, hardened security, k3s, and zero-config app templates." />
+  <meta property="og:url" content="https://shirou-eh.github.io/Monolith-website/" />
+  <meta property="og:image" content="https://shirou-eh.github.io/Monolith-website/og.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Monolith OS - Built for the ones who mean it" />
+  <meta name="twitter:description" content="A lean, server-focused Linux distribution. Three TTY-only ISOs, one CLI, one config." />
+  <meta name="twitter:image" content="https://shirou-eh.github.io/Monolith-website/og.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="aurora a3"></div>
+    <div class="grid"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Monolith OS home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#35e0a1" />
+            <stop offset="100%" stop-color="#5cc9ff" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="28" height="28" rx="7" fill="url(#bg-grad)" />
+        <path d="M9 22 V10 L16 18 L23 10 V22" stroke="#070b14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      </svg>
+      <span class="brand-text">Monolith<span class="brand-os">OS</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#surfaces">Surfaces</a>
+      <a href="#download">Download</a>
+      <a href="#install">Install</a>
+      <a href="#support">Support</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://github.com/shirou-eh/Monolith" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-primary" href="#download">Download v1.0.1</a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#features">Features</a>
+    <a href="#profiles">Profiles</a>
+    <a href="#surfaces">Surfaces</a>
+    <a href="#download">Download</a>
+    <a href="#install">Install</a>
+    <a href="#support">Support</a>
+    <a href="https://github.com/shirou-eh/Monolith" target="_blank" rel="noopener">GitHub</a>
+    <a class="mobile-primary" href="#download">Download v1.0.1</a>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-left reveal">
+        <span class="eyebrow">
+          <span class="dot"></span>
+          v1.0.1 <strong>Obsidian</strong> &middot; out now
+        </span>
+        <h1 class="hero-title">
+          The server OS<br />
+          <span class="grad">built for the ones</span><br />
+          who mean it.
+        </h1>
+        <p class="hero-sub">
+          Monolith OS is a lean, server-focused Linux distribution on Arch Linux:
+          custom kernel, unified <code>mnctl</code> CLI, branded TUI and web
+          dashboards, integrated monitoring, hardened security, k3s,
+          snapshot-safe upgrades, and zero-config app templates.
+          <strong>One tool, one config, one box.</strong>
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#download">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M5 20h14v-2H5v2zM12 4l-6 6h4v6h4v-6h4l-6-6z" transform="rotate(180 12 12)" />
+            </svg>
+            Download v1.0.1
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/shirou-eh/Monolith" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.39 1.24-3.23-.13-.31-.54-1.54.11-3.21 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.67.25 2.9.12 3.21.77.84 1.24 1.92 1.24 3.23 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <ul class="hero-meta">
+          <li><strong>3</strong> TTY ISOs</li>
+          <li><strong>5</strong> Rust binaries</li>
+          <li><strong>50+</strong> mnctl subcommands</li>
+          <li><strong>0</strong> bloat</li>
+        </ul>
+      </div>
+
+      <div class="hero-right reveal" aria-hidden="false">
+        <div class="terminal" role="img" aria-label="Terminal demo of mnctl info system">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">user@monolith ~ &middot; mnctl</span>
+          </div>
+          <pre class="terminal-body" id="termBody"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="strip-row">
+        <div><strong>Built on</strong> Arch Linux</div>
+        <div><strong>Powered by</strong> Rust 1.95+</div>
+        <div><strong>Container runtime</strong> Docker / Podman</div>
+        <div><strong>Cluster</strong> k3s</div>
+        <div><strong>License</strong> MIT</div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Why Monolith OS</span>
+        <h2>One tool. One config. One box.</h2>
+        <p>Most distros are general-purpose. Monolith is single-purpose: run servers, run them well, and stop fighting the box. Everything you'd cobble together yourself - firewall, monitoring, containers, VPN, backups, reverse proxy, app templates - is wired in from boot.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 4h18v2H3V4zm0 4h18v2H3V8zm0 4h18v2H3v-2zm0 4h12v2H3v-2zm0 4h7v2H3v-2z"/></svg></div>
+          <h3>One CLI for everything</h3>
+          <p><code>mnctl</code> is a 50-subcommand multi-call CLI. Services, containers, deploys, k3s, VPN, ISO builds - same verbs, same flags. No 7 tools and 3 dialects.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 3 7v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5zm0 6 4 2v3.4c0 3-2 5.7-4 6.6-2-.9-4-3.6-4-6.6V10l4-2z"/></svg></div>
+          <h3>Hardened by default</h3>
+          <p>Default-deny <code>nftables</code>, key-only SSH on <code>:2222</code>, AppArmor profiles, fail2ban, sysctl hardening. Boot it on a VPS, leave it.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a10 10 0 0 0-7.07 17.07A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-5.66-13.66A8 8 0 1 1 12 20zm-1-13h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg></div>
+          <h3>Snapshot-safe upgrades</h3>
+          <p><code>mnpkg upgrade</code> takes a Btrfs snapshot via snapper <em>before</em> touching the system. One command rolls it back. No more 3am panic.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zm0-8h14V7H7v2z"/></svg></div>
+          <h3>Three surfaces, one brand</h3>
+          <p>The web dashboard <code>mnweb</code>, the TUI <code>mntui</code>, and the installer all share the same emerald + cyan aurora palette and the same data model.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V7a1 1 0 0 0-1-1zM9 4h6v2H9V4zm10 16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8h14v12z"/></svg></div>
+          <h3>Zero-config templates</h3>
+          <p><code>mnctl template deploy minecraft --name pvp</code> and you have a hardened container with reverse proxy, TLS, backups, and Prometheus targets.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2 2 22h20L12 2zm0 5 6.5 12.5h-13L12 7zm-1 4v4h2v-4h-2zm0 5v2h2v-2h-2z"/></svg></div>
+          <h3>Tier-aware</h3>
+          <p>Ship <strong>lite</strong> to a 512&nbsp;MB VPS, <strong>full</strong> to a home server, <strong>pro</strong> to a k3s node. Same image family, same workflow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="profiles" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Profiles</span>
+        <h2>Three tiers. Pick yours.</h2>
+        <p>Each ISO ships with the matching <code>[system].profile</code> baked into <code>/etc/monolith/monolith.toml</code>, so <code>mnctl profile show</code> on first boot reports the correct tier.</p>
+      </div>
+
+      <div class="grid-3 profiles">
+        <article class="card profile reveal" data-tier="lite">
+          <div class="profile-tag">lite</div>
+          <h3>Just enough.</h3>
+          <ul class="spec">
+            <li><strong>1 vCPU</strong> &middot; 512 MB-1 GB RAM</li>
+            <li><strong>8 GB</strong> disk</li>
+            <li>Web UI <em>off</em>, monitoring <em>off</em></li>
+            <li>Discord bots, microservers, edge nodes</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-lite-x86_64.iso">Download lite ISO</a>
+          <small class="profile-size">monolith-1.0.1-lite-x86_64.iso &middot; 1.25 GB</small>
+        </article>
+
+        <article class="card profile reveal recommended" data-tier="full">
+          <div class="profile-tag">full</div>
+          <span class="badge">Recommended</span>
+          <h3>The default home server.</h3>
+          <ul class="spec">
+            <li><strong>2 cores</strong> &middot; 2 GB RAM</li>
+            <li><strong>20 GB</strong> disk</li>
+            <li>Web UI on, monitoring on, containers on</li>
+            <li>Single-node home/work server</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-full-x86_64.iso">Download full ISO</a>
+          <small class="profile-size">monolith-1.0.1-full-x86_64.iso &middot; 1.25 GB</small>
+        </article>
+
+        <article class="card profile reveal" data-tier="pro">
+          <div class="profile-tag">pro</div>
+          <h3>Production-grade.</h3>
+          <ul class="spec">
+            <li><strong>4+ cores</strong> &middot; 8+ GB RAM</li>
+            <li><strong>100 GB</strong> disk</li>
+            <li>Everything from <em>full</em> + k3s, etcd cluster</li>
+            <li>Cluster nodes, build hosts, prod boxes</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-pro-x86_64.iso">Download pro ISO</a>
+          <small class="profile-size">monolith-1.0.1-pro-x86_64.iso &middot; 1.25 GB</small>
+        </article>
+      </div>
+    </section>
+
+    <section id="surfaces" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Three surfaces</span>
+        <h2>Same data, three ways to look at it.</h2>
+        <p>Whatever's at hand - SSH, browser, or a console plugged into the rack - Monolith gives you the same numbers, the same brand, the same shortcuts.</p>
+      </div>
+
+      <div class="tabs reveal">
+        <div class="tab-bar" role="tablist" aria-label="Surfaces">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-cli" id="tabbtn-cli">mnctl &middot; CLI</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-tui" id="tabbtn-tui">mntui &middot; TUI</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-web" id="tabbtn-web">mnweb &middot; Web</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel active" role="tabpanel" id="tab-cli" aria-labelledby="tabbtn-cli">
+            <div class="terminal small">
+              <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">mnctl</span>
+              </div>
+<pre class="terminal-body">
+<span class="prompt">$</span> <span class="cmd">mnctl service list</span>
+<span class="ok">●</span> nginx.service                     active   running
+<span class="ok">●</span> docker.service                    active   running
+<span class="ok">●</span> monolith-mnweb.service            active   running
+<span class="warn">●</span> postgresql.service                active   reloading
+<span class="bad">●</span> fail2ban.service                  failed   exit-code
+
+<span class="prompt">$</span> <span class="cmd">mnctl template deploy minecraft --name pvp</span>
+<span class="ok">✓</span> pulled image itzg/minecraft-server:java21
+<span class="ok">✓</span> created volume monolith-app-pvp
+<span class="ok">✓</span> started monolith-app-pvp.service
+<span class="ok">✓</span> proxied at pvp.example.com (TLS)
+<span class="ok">✓</span> Prometheus target attached
+</pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="tab-tui" aria-labelledby="tabbtn-tui" hidden>
+            <div class="terminal small">
+              <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">mntui</span>
+              </div>
+<pre class="terminal-body tui">
+<span class="grad-text">╭ Monolith OS · v1.0.1 Obsidian ────────── tab 1/6 · q quit ╮</span>
+│  CPU                                                       │
+│  ▁▂▃▅▆▇█▇▆▅▄▃▃▄▅▆▇█▇▅▄▃▂▂▃▄▅▆▇▆▅▄▃▂▁                       │
+│  load 0.42 0.58 0.61    cores 4 @ 3.4 GHz                 │
+│                                                             │
+│  RAM     <span class="bar-ok">████████████░░░░░░░░░</span> 58%  4.7 / 8.0 GB    │
+│  swap    <span class="bar-warn">░░░░░░░░░░░░░░░░░░░░░</span>  3%  120 MB / 4 GB │
+│                                                             │
+│  Disks                                                     │
+│  /        ext4    <span class="bar-ok">████████████░░░░░░</span>  61%  62/102 GB │
+│  /var/lib btrfs   <span class="bar-warn">██████████████░░░░</span>  78%  78/100 GB │
+│                                                             │
+│  Top processes                  cpu      mem               │
+│  monolith-mnweb                  4%      35 MB             │
+│  postgres                        3%     220 MB             │
+│  prometheus                      2%      90 MB             │
+<span class="grad-text">╰─────────────── 1 overview · 2 services · 3 disks · 4 net ─╯</span>
+</pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="tab-web" aria-labelledby="tabbtn-web" hidden>
+            <div class="webmock">
+              <div class="webmock-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="addr">monolith.local:9911</span>
+              </div>
+              <div class="webmock-body">
+                <aside class="webmock-side">
+                  <div class="logo-mini">
+                    <svg viewBox="0 0 32 32" width="20" height="20"><rect x="2" y="2" width="28" height="28" rx="7" fill="url(#bg-grad)" /></svg>
+                    <span>Monolith</span>
+                  </div>
+                  <a class="active">Overview</a>
+                  <a>Services</a>
+                  <a>Containers</a>
+                  <a>Disks</a>
+                  <a>Templates</a>
+                  <a>Logs</a>
+                </aside>
+                <section class="webmock-main">
+                  <div class="webmock-stats">
+                    <div class="stat"><span class="stat-label">CPU</span><span class="stat-val">42%</span><div class="stat-spark"></div></div>
+                    <div class="stat"><span class="stat-label">RAM</span><span class="stat-val">4.7 / 8 GB</span><div class="stat-bar"><i style="width:58%"></i></div></div>
+                    <div class="stat"><span class="stat-label">Disk</span><span class="stat-val">62 / 102 GB</span><div class="stat-bar"><i style="width:61%"></i></div></div>
+                    <div class="stat"><span class="stat-label">Uptime</span><span class="stat-val">14d 03h</span></div>
+                  </div>
+                  <div class="webmock-cards">
+                    <div class="webmock-card">
+                      <h4>Services</h4>
+                      <ul>
+                        <li><span class="pill ok">●</span>nginx</li>
+                        <li><span class="pill ok">●</span>docker</li>
+                        <li><span class="pill ok">●</span>monolith-mnweb</li>
+                        <li><span class="pill warn">●</span>postgresql</li>
+                      </ul>
+                    </div>
+                    <div class="webmock-card">
+                      <h4>Containers</h4>
+                      <ul>
+                        <li><span class="pill ok">●</span>app-pvp <small>0.4% &middot; 320 MB</small></li>
+                        <li><span class="pill ok">●</span>postgres <small>2.3% &middot; 220 MB</small></li>
+                        <li><span class="pill ok">●</span>redis <small>0.1% &middot; 12 MB</small></li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Download</span>
+        <h2>v1.0.1 "Obsidian"</h2>
+        <p>Three TTY-only x86_64 ISOs. Same kernel, same installer, same Monolith binaries pre-vendored under <code>/usr/local/bin/</code>. The <code>[system].profile</code> baked into <code>/etc/monolith/monolith.toml</code> is the only difference.</p>
+      </div>
+
+      <div class="downloads reveal">
+        <div class="dl-row">
+          <a class="dl" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-lite-x86_64.iso">
+            <div class="dl-tier">lite</div>
+            <div class="dl-meta">
+              <strong>monolith-1.0.1-lite-x86_64.iso</strong>
+              <small>1.25 GB &middot; x86_64 TTY ISO</small>
+            </div>
+            <svg class="dl-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zM12 4l-6 6h4v6h4v-6h4l-6-6z" transform="rotate(180 12 12)"/></svg>
+          </a>
+          <a class="dl-sha" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-lite-x86_64.iso.sha256">SHA-256</a>
+        </div>
+        <div class="dl-row">
+          <a class="dl" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-full-x86_64.iso">
+            <div class="dl-tier">full</div>
+            <div class="dl-meta">
+              <strong>monolith-1.0.1-full-x86_64.iso</strong>
+              <small>1.25 GB &middot; x86_64 TTY ISO &middot; <em>recommended</em></small>
+            </div>
+            <svg class="dl-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zM12 4l-6 6h4v6h4v-6h4l-6-6z" transform="rotate(180 12 12)"/></svg>
+          </a>
+          <a class="dl-sha" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-full-x86_64.iso.sha256">SHA-256</a>
+        </div>
+        <div class="dl-row">
+          <a class="dl" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-pro-x86_64.iso">
+            <div class="dl-tier">pro</div>
+            <div class="dl-meta">
+              <strong>monolith-1.0.1-pro-x86_64.iso</strong>
+              <small>1.25 GB &middot; x86_64 TTY ISO</small>
+            </div>
+            <svg class="dl-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zM12 4l-6 6h4v6h4v-6h4l-6-6z" transform="rotate(180 12 12)"/></svg>
+          </a>
+          <a class="dl-sha" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-pro-x86_64.iso.sha256">SHA-256</a>
+        </div>
+        <div class="dl-row">
+          <a class="dl tarball" href="https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-x86_64-unknown-linux-gnu.tar.gz">
+            <div class="dl-tier">tar</div>
+            <div class="dl-meta">
+              <strong>monolith-x86_64-unknown-linux-gnu.tar.gz</strong>
+              <small>3.6 MB &middot; binary tarball for existing Arch Linux</small>
+            </div>
+            <svg class="dl-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zM12 4l-6 6h4v6h4v-6h4l-6-6z" transform="rotate(180 12 12)"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="tiny center">All artifacts SHA-256 verified &middot; <a href="https://github.com/shirou-eh/Monolith/releases/tag/v1.0.1" target="_blank" rel="noopener">View release page</a></p>
+    </section>
+
+    <section id="install" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Install</span>
+        <h2>From zero to box, four ways.</h2>
+        <p>Whichever path you pick, you land in the same place: a Monolith box with <code>mnctl</code>, <code>mntui</code>, <code>mnweb</code>, snapper, nftables, SSH on <code>:2222</code>, and a working app-template engine.</p>
+      </div>
+
+      <div class="tabs reveal install-tabs">
+        <div class="tab-bar" role="tablist" aria-label="Install path">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="ins-iso" id="insbtn-iso">A &middot; Boot from ISO</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="ins-arch" id="insbtn-arch">B &middot; Convert Arch</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="ins-src" id="insbtn-src">C &middot; From source</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="ins-iso2" id="insbtn-iso2">D &middot; Build your own ISO</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel active" role="tabpanel" id="ins-iso" aria-labelledby="insbtn-iso">
+<pre class="codeblock"><span class="comment"># 1. Download (pick your tier)</span>
+curl -L -o monolith.iso \
+  https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-full-x86_64.iso
+
+<span class="comment"># 2. Verify the SHA-256</span>
+curl -L -O https://github.com/shirou-eh/Monolith/releases/download/v1.0.1/monolith-1.0.1-full-x86_64.iso.sha256
+sha256sum -c monolith-1.0.1-full-x86_64.iso.sha256
+
+<span class="comment"># 3. Write to a USB stick (replace /dev/sdX)</span>
+sudo dd if=monolith.iso of=/dev/sdX bs=4M status=progress conv=fsync
+
+<span class="comment"># 4. Boot from the stick - the live system auto-launches the installer.</span></pre>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="ins-arch" aria-labelledby="insbtn-arch" hidden>
+<pre class="codeblock"><span class="comment"># Already on Arch? Convert in place.</span>
+curl -fsSL https://raw.githubusercontent.com/shirou-eh/Monolith/main/scripts/install.sh | sudo bash
+
+<span class="comment"># Optional: apply security defaults</span>
+sudo mnctl security harden
+sudo mnctl web enable</pre>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="ins-src" aria-labelledby="insbtn-src" hidden>
+<pre class="codeblock"><span class="comment"># Requires Rust 1.95+</span>
+git clone https://github.com/shirou-eh/Monolith.git
+cd Monolith
+make build
+sudo make install
+
+<span class="comment"># Or run any binary out of tree</span>
+cargo run --release --bin mnctl -- info system
+cargo run --release --bin mntui
+cargo run --release --bin mnweb            <span class="comment"># 127.0.0.1:9911</span></pre>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="ins-iso2" aria-labelledby="insbtn-iso2" hidden>
+<pre class="codeblock"><span class="comment"># Build any tier locally (Docker or native Arch host)</span>
+sudo ./iso/build-iso.sh --tier full --out ./out --version 1.0.1
+
+<span class="comment"># Inside an Arch container</span>
+docker run --rm --privileged -v "$(pwd):/work" -w /work archlinux:latest bash -c '
+  pacman -Syu --noconfirm
+  pacman -S --noconfirm --needed archiso grub edk2-shell libisoburn squashfs-tools dosfstools mtools
+  ./iso/build-iso.sh --tier full --out out --version 1.0.1
+'</pre>
+          </div>
+        </div>
+      </div>
+
+      <p class="center"><a class="link-arrow" href="https://github.com/shirou-eh/Monolith/blob/main/INSTALL.md" target="_blank" rel="noopener">Read the full installation guide &rarr;</a></p>
+    </section>
+
+    <section id="surfaces2" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Cookbook</span>
+        <h2>Look how short it is.</h2>
+        <p>Each line is a copy-pasteable recipe. <code>mnctl --help</code> and <code>mnctl &lt;verb&gt; --help</code> cover the rest.</p>
+      </div>
+      <div class="grid-2 reveal">
+<pre class="codeblock"><span class="comment"># Day 1</span>
+mnctl info system && mnctl profile show
+mnctl security audit
+mnctl monitor status
+
+<span class="comment"># Containers / app deploys</span>
+mnctl template deploy minecraft --name mc-pvp
+mnctl deploy app /opt/my-compose-repo --name api
+mnctl container logs api --follow
+
+<span class="comment"># Reverse proxy with automatic TLS</span>
+mnctl proxy add api.example.com \
+  --service monolith-app-api.service --tls
+
+<span class="comment"># Backups</span>
+mnctl backup create --tag pre-upgrade
+mnctl backup restore --snapshot &lt;ID&gt;</pre>
+<pre class="codeblock"><span class="comment"># Kubernetes (k3s)</span>
+mnctl kube install --role server
+mnctl kube install --role agent \
+  --server https://control:6443 --token &lt;TOK&gt;
+mnctl kube kubectl get pods -A
+
+<span class="comment"># Disk health</span>
+mnctl disk smart status
+mnctl disk smart test --type short /dev/sda
+
+<span class="comment"># VPN</span>
+mnctl vpn create wg0
+mnctl vpn peer add wg0 \
+  --pubkey &lt;K&gt; --allowed-ips 10.0.0.2/32
+
+<span class="comment"># Updates - snapshot-safe</span>
+mnctl update apply --reboot-if-needed
+mnctl update rollback</pre>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div class="grid-4 stats reveal">
+        <div class="stat-big"><span class="num">3</span><span class="lbl">TTY-only ISOs</span></div>
+        <div class="stat-big"><span class="num">5</span><span class="lbl">Rust binaries</span></div>
+        <div class="stat-big"><span class="num">50<span class="plus">+</span></span><span class="lbl">mnctl subcommands</span></div>
+        <div class="stat-big"><span class="num">14<span class="plus">+</span></span><span class="lbl">app templates</span></div>
+      </div>
+    </section>
+
+    <section id="support" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">Support</span>
+        <h2>Stuck? Write me on Discord.</h2>
+        <p>If you hit a wall, found a bug, or just want to brainstorm a setup, ping me on Discord. I read every message.</p>
+      </div>
+
+      <div class="discord-card reveal">
+        <div class="discord-bg" aria-hidden="true"></div>
+        <div class="discord-icon" aria-hidden="true">
+          <svg viewBox="0 0 71 55" width="48" height="48"><path fill="#fff" d="M60.1 4.9A57.6 57.6 0 0 0 46 .6a40 40 0 0 0-1.8 3.7 53.4 53.4 0 0 0-16.4 0A40 40 0 0 0 26 .6 57.6 57.6 0 0 0 11.9 4.9C2.8 18.3.4 31.4 1.6 44.4a58 58 0 0 0 17.7 8.9 42.7 42.7 0 0 0 3.8-6.1 37.4 37.4 0 0 1-6-2.9c.5-.4 1-.8 1.5-1.2a41.4 41.4 0 0 0 35.8 0c.5.4 1 .8 1.5 1.2a37.4 37.4 0 0 1-6 2.9 42.7 42.7 0 0 0 3.8 6.1 58 58 0 0 0 17.7-8.9c1.4-15-2.5-28-12.3-39.5zM23.7 36.7c-3.5 0-6.4-3.2-6.4-7.1 0-3.9 2.8-7.1 6.4-7.1s6.4 3.2 6.4 7.1c0 3.9-2.8 7.1-6.4 7.1zm23.6 0c-3.5 0-6.4-3.2-6.4-7.1 0-3.9 2.8-7.1 6.4-7.1s6.4 3.2 6.4 7.1c0 3.9-2.8 7.1-6.4 7.1z"/></svg>
+        </div>
+        <div class="discord-info">
+          <span class="discord-eyebrow">Discord</span>
+          <h3 class="discord-handle">shiro_eh</h3>
+          <p class="discord-help">Send a friend request or DM directly. I usually respond within a day.</p>
+          <div class="discord-actions">
+            <button class="btn btn-primary" id="copyDiscord" type="button">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
+              <span class="copy-text">Copy <code>shiro_eh</code></span>
+            </button>
+            <a class="btn btn-ghost" href="https://discord.com/users/shiro_eh" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm6 16H4V5h7V3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7h-2v7z"/></svg>
+              Open in Discord
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3 secondary-support reveal">
+        <a class="card link-card" href="https://github.com/shirou-eh/Monolith/issues" target="_blank" rel="noopener">
+          <h4>Report an issue</h4>
+          <p>Bug? Open a GitHub issue with logs, distro version, and reproduction steps.</p>
+          <span class="link-arrow-mini">github.com/shirou-eh/Monolith/issues &rarr;</span>
+        </a>
+        <a class="card link-card" href="https://github.com/shirou-eh/Monolith/discussions" target="_blank" rel="noopener">
+          <h4>Discussions</h4>
+          <p>Ask broader questions, share your setup, or propose features.</p>
+          <span class="link-arrow-mini">github.com/shirou-eh/Monolith/discussions &rarr;</span>
+        </a>
+        <a class="card link-card" href="https://github.com/shirou-eh/Monolith/blob/main/INSTALL.md" target="_blank" rel="noopener">
+          <h4>Installation guide</h4>
+          <p>Long-form, copy-pasteable, day-1 cookbook. Read it before asking.</p>
+          <span class="link-arrow-mini">github.com/shirou-eh/Monolith/blob/main/INSTALL.md &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section cta-banner">
+      <div class="banner reveal">
+        <h2>Ready to deploy?</h2>
+        <p>Three ISOs, one CLI, zero ceremony.</p>
+        <div class="banner-ctas">
+          <a class="btn btn-primary btn-lg" href="#download">Download v1.0.1</a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/shirou-eh/Monolith" target="_blank" rel="noopener">Star on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="7" fill="url(#bg-grad)" />
+            <path d="M9 22 V10 L16 18 L23 10 V22" stroke="#070b14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+          <span class="brand-text">Monolith<span class="brand-os">OS</span></span>
+        </a>
+        <p class="tag">Built for the ones who mean it.</p>
+      </div>
+      <div>
+        <h5>Project</h5>
+        <a href="https://github.com/shirou-eh/Monolith" target="_blank" rel="noopener">Source</a>
+        <a href="https://github.com/shirou-eh/Monolith/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="https://github.com/shirou-eh/Monolith/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
+        <a href="https://github.com/shirou-eh/Monolith/blob/main/ROADMAP.md" target="_blank" rel="noopener">Roadmap</a>
+      </div>
+      <div>
+        <h5>Docs</h5>
+        <a href="https://github.com/shirou-eh/Monolith/blob/main/README.md" target="_blank" rel="noopener">README</a>
+        <a href="https://github.com/shirou-eh/Monolith/blob/main/INSTALL.md" target="_blank" rel="noopener">Install guide</a>
+        <a href="https://github.com/shirou-eh/Monolith/tree/main/docs" target="_blank" rel="noopener">Multi-language docs</a>
+        <a href="https://github.com/shirou-eh/Monolith/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <a href="https://github.com/shirou-eh/Monolith/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/shirou-eh/Monolith/discussions" target="_blank" rel="noopener">Discussions</a>
+        <a href="https://discord.com/users/shiro_eh" target="_blank" rel="noopener">Discord &middot; shiro_eh</a>
+      </div>
+    </div>
+    <div class="foot-line">
+      <small>&copy; <span id="year">2026</span> shirou-eh &middot; MIT License &middot; Made with care.</small>
+      <small>v1.0.1 "Obsidian"</small>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

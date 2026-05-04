@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#070b14" />
+  <title>404 &middot; Monolith OS</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="grid"></div>
+  </div>
+  <main style="max-width:720px;margin:0 auto;padding:120px 24px;text-align:center;">
+    <div style="font:700 14px/1 'JetBrains Mono', monospace; letter-spacing:2.5px; color:#5cc9ff; text-transform:uppercase;">404 &middot; not found</div>
+    <h1 style="font:800 clamp(48px, 12vw, 110px)/1 'JetBrains Mono', monospace; letter-spacing:-3px; margin:14px 0 18px;
+               background: linear-gradient(135deg, #5cffd2 0%, #6dd0ff 100%); -webkit-background-clip:text; background-clip:text; color:transparent;">
+      404
+    </h1>
+    <h2 style="font-size:24px; letter-spacing:-.2px; margin:0 0 14px;">This page is not in the manifest.</h2>
+    <p style="color:#9aa6bd; max-width:48ch; margin:0 auto 32px;">
+      The path you followed isn't part of the Monolith OS site. It might have been moved, mistyped, or never existed.
+    </p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn btn-primary btn-lg" href="./">Back to home</a>
+      <a class="btn btn-ghost btn-lg" href="https://github.com/shirou-eh/Monolith" target="_blank" rel="noopener">View source</a>
+    </div>
+    <pre style="margin:48px auto 0; max-width:560px; text-align:left; font:13.5px/1.7 'JetBrains Mono', monospace; color:#cfe9ff;
+                background:linear-gradient(180deg,#0a1224,#060a14); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:22px;">
+<span style="color:#35e0a1">$</span> mnctl info path
+   path     <span style="color:#ff6b8a">404</span> not found
+   suggest  go <a href="./" style="color:#5cffd2;">home</a></pre>
+  </main>
+</body>
+</html>

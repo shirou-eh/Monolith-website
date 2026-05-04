@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050810"/>
+      <stop offset="60%" stop-color="#0a1224"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#35e0a1"/>
+      <stop offset="100%" stop-color="#5cc9ff"/>
+    </linearGradient>
+    <radialGradient id="aurora1" cx="0.2" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#35e0a1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#35e0a1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora2" cx="0.85" cy="0.7" r="0.5">
+      <stop offset="0%" stop-color="#5cc9ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5cc9ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#aurora1)"/>
+  <rect width="1200" height="630" fill="url(#aurora2)"/>
+  <g opacity="0.06" stroke="#fff" stroke-width="1">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200"/>
+    <path d="M100 0 V630 M200 0 V630 M300 0 V630 M400 0 V630 M500 0 V630 M600 0 V630 M700 0 V630 M800 0 V630 M900 0 V630 M1000 0 V630 M1100 0 V630"/>
+  </g>
+
+  <!-- Logo block -->
+  <g transform="translate(96, 200)">
+    <rect width="116" height="116" rx="28" fill="url(#grad)"/>
+    <path d="M28 90 V32 L58 62 L88 32 V90" stroke="#070b14" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(244, 244)">
+    <text x="0" y="0" fill="#e7edf7" font-family="Inter, system-ui, sans-serif" font-size="86" font-weight="800" letter-spacing="-2">Monolith OS</text>
+    <text x="0" y="80" fill="url(#grad)" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="600" letter-spacing="-1">v1.0.1 "Obsidian"</text>
+    <text x="0" y="142" fill="#9aa6bd" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="500">Built for the ones who mean it.</text>
+  </g>
+
+  <!-- Tag pills -->
+  <g transform="translate(96, 460)" font-family="JetBrains Mono, monospace" font-size="22" font-weight="600">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="170" height="56" rx="16" fill="rgba(53, 224, 161, 0.12)" stroke="rgba(53, 224, 161, 0.35)"/>
+      <text x="20" y="36" fill="#35e0a1">3 ISOs</text>
+    </g>
+    <g transform="translate(190, 0)">
+      <rect x="0" y="0" width="220" height="56" rx="16" fill="rgba(92, 201, 255, 0.10)" stroke="rgba(92, 201, 255, 0.30)"/>
+      <text x="20" y="36" fill="#5cc9ff">5 Rust binaries</text>
+    </g>
+    <g transform="translate(430, 0)">
+      <rect x="0" y="0" width="290" height="56" rx="16" fill="rgba(176, 124, 255, 0.10)" stroke="rgba(176, 124, 255, 0.30)"/>
+      <text x="20" y="36" fill="#b07cff">50+ subcommands</text>
+    </g>
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="180" height="56" rx="16" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.18)"/>
+      <text x="20" y="36" fill="#e7edf7">0 bloat</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="96" y="580" fill="#6c7691" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500">github.com/shirou-eh/Monolith</text>
+</svg>
