@@ -516,6 +516,10 @@ code {
   background: rgba(53, 224, 161, .12);
   color: var(--emerald);
 }
+.card.profile[data-tier="desktop"] .profile-tag {
+  background: rgba(92, 201, 255, .12);
+  color: var(--cyan);
+}
 .badge {
   position: absolute;
   top: 18px;
@@ -592,6 +596,18 @@ code {
   margin: 0;
 }
 .codeblock .comment { color: var(--text-mute); }
+.codeblock-inline {
+  background: linear-gradient(180deg, #0a1224 0%, #060a14 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-2);
+  padding: 12px 14px;
+  margin: 0 0 6px;
+  text-align: center;
+}
+.codeblock-inline code {
+  font: 13px/1.5 'JetBrains Mono', monospace;
+  color: #cfe9ff;
+}
 
 /* ----------- Downloads ----------- */
 

@@ -75,7 +75,7 @@
   if (term && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const lines = [
       { txt: '$ mnctl info system\n',      cls: 'cmd',     prefix: 'prompt' },
-      { txt: '   Distro     Monolith OS 1.0.1 "Obsidian"\n' },
+      { txt: '   Distro     Monolith OS 1.3.0 "Slate"\n' },
       { txt: '   Kernel     6.10.6-monolith (BORE + BBR3)\n' },
       { txt: '   Profile    full · 4 cores · 8 GB RAM\n' },
       { txt: '   Uptime     14d 3h 22m\n' },
@@ -98,6 +98,9 @@
       { txt: 'started monolith-app-pvp.service\n' },
       { txt: '   ✓ ', cls: 'ok' },
       { txt: 'attached Prometheus target\n\n' },
+      { txt: '$ mnctl security ids\n', cls: 'cmd', prefix: 'prompt' },
+      { txt: '   ✓ ', cls: 'ok' },
+      { txt: 'No anomalies in the last 10 minutes\n\n' },
       { txt: '$ ', cls: 'cmd', prefix: 'prompt' },
     ];
 

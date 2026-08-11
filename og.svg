@@ -35,7 +35,7 @@
   <!-- Title -->
   <g transform="translate(244, 244)">
     <text x="0" y="0" fill="#e7edf7" font-family="Inter, system-ui, sans-serif" font-size="86" font-weight="800" letter-spacing="-2">Monolith OS</text>
-    <text x="0" y="80" fill="url(#grad)" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="600" letter-spacing="-1">v1.0.1 "Obsidian"</text>
+    <text x="0" y="80" fill="url(#grad)" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="600" letter-spacing="-1">v1.3.0 "Slate"</text>
     <text x="0" y="142" fill="#9aa6bd" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="500">Built for the ones who mean it.</text>
   </g>
 
@@ -51,7 +51,7 @@
     </g>
     <g transform="translate(430, 0)">
       <rect x="0" y="0" width="290" height="56" rx="16" fill="rgba(176, 124, 255, 0.10)" stroke="rgba(176, 124, 255, 0.30)"/>
-      <text x="20" y="36" fill="#b07cff">50+ subcommands</text>
+      <text x="20" y="36" fill="#b07cff">58+ subcommands</text>
     </g>
     <g transform="translate(740, 0)">
       <rect x="0" y="0" width="180" height="56" rx="16" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.18)"/>
